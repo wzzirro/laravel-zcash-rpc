@@ -1,0 +1,28 @@
+{
+    "name": "wzzirro/laravel-zcash-rpc",
+    "description": "Zcash JSON-RPC Service Provider for Laravel",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.6.*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Wzzirro\\Zcash\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wzzirro\\Zcash\\Providers\\ServiceProvider"
+            ]
+        },
+        "aliases": {
+            "Zcashd": "Wzzirro\\Zcash\\Facade"
+        }
+    }
+}
